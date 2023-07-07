@@ -1,5 +1,18 @@
-template-repository (1.0-1) unstable; urgency=medium
+kconfiglib (14.1.0-3) unstable; urgency=medium
 
-  * Initial release
+  [ Heinrich Schuchardt ]
+  * guiconfig.py: add missing import re
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Bastian Germann <bage@debian.org>  Tue, 16 Aug 2022 22:53:54 +0200
+
+kconfiglib (14.1.0-2) unstable; urgency=medium
+
+  * Source-only reupload
+
+ -- Bastian Germann <bage@debian.org>  Thu, 10 Feb 2022 12:56:44 +0100
+
+kconfiglib (14.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #998082)
+
+ -- Bastian Germann <bage@debian.org>  Thu, 04 Nov 2021 01:41:17 +0100

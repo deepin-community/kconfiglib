@@ -1,0 +1,32 @@
+From: Heinrich Schuchardt <heinrich.schuchardt@canonical.com>
+Date: Tue, 19 Jul 2022 11:33:59 +0200
+Subject: guiconfig.py: add missing import re
+
+Using the search in guiconfig.py leads to an error:
+
+    File "/usr/lib/python3/dist-packages/guiconfig.py", line 1861,
+    in _update_jump_to_matches
+      except re.error as e:
+    NameError: name 're' is not defined
+
+The error is reported upstream
+https://github.com/ulfalizer/Kconfiglib/issues/105
+but the project is not maintained since 2020.
+
+Signed-off-by: Heinrich Schuchardt <heinrich.schuchardt@canonical.com>
+---
+ guiconfig.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/guiconfig.py b/guiconfig.py
+index 7804fdc..0594ba6 100755
+--- a/guiconfig.py
++++ b/guiconfig.py
+@@ -54,6 +54,7 @@ $srctree is supported through Kconfiglib.
+ 
+ import errno
+ import os
++import re
+ import sys
+ 
+ _PY2 = sys.version_info[0] < 3
